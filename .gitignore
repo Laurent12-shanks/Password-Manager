@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+
+# Virtualenv / venv
+venv/
+env/
+.venv/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Sensitive data - NEVER commit keys/credentials/env
+utils/keys/
+utils/credentials/
+.env
+
+# Bytecode / distribution
+build/
+dist/
+*.egg-info/

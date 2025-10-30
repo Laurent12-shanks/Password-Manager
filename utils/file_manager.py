@@ -57,7 +57,6 @@ def encrypt_file(username: str, password: str) -> None:
     try:
         ciphertext = fernet.encrypt(plaintext)
         write_file(username, ciphertext)
-        print(f"Fichier '{username}.credentials' chiffré avec succès.")
     except Exception as e:
         print(f"Erreur lors du chiffrement : {e}")
 
@@ -90,7 +89,6 @@ def decrypt_file(username: str, password: str) -> bool:
     try:
         plaintext = fernet.decrypt(ciphertext)
         write_file(username, plaintext)
-        print(f"Fichier '{filename}' déchiffré temporairement.")
         return True
     except Exception as e:
         print(f"Erreur lors du déchiffrement : {e}")
